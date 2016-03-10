@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+	font-family: Helvetica;
+	padding-top: 70px;
+}
+
+.new-post{
+	clear: both;
+	padding-top: 5em;
+}
+
+.splash{
+	height: 50em;
+	width: 100%;
+	
+}

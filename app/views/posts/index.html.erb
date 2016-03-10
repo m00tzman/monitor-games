@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div class="splash">
+  
+</div>
+
+    <% @posts.each do |post| %>
+        <div class="col-md-4 post">
+          <p><strong><%= link_to post.title, post_path(post) %></strong></p>
+          <p><strong><%= post.author %></strong></p>
+          <%= post.text %>
+          <div class="post-control">
+            <%= link_to 'Edit', edit_post_path(post) %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+    <% end %>
+
+<div class="new-post">
+  <%= link_to 'New Post', new_post_path %>
+</div>
